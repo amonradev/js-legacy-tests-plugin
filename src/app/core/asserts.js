@@ -1,20 +1,25 @@
 function assertTrue(isTrue, text) {
   if (!isTrue) {
-    throw new assertFailed(`${text} - failed!`);
+    throw new AssertFailed(`${text} - failed!`);
   }
 }
 function assertFalse(isFalse, text) {
   if (isFalse) {
-    throw new assertFailed(`${text} - failed!`);
+    throw new AssertFailed(`${text} - failed!`);
   }
 }
 function assertNotEmpty(data, text) {
-  if (data.includes("", null, undefined)) {
-    throw new assertFailed(`${text} - failed!`);
+  if (['', null, undefined].includes(data)) {
+    throw new AssertFailed(`${text} - failed!`);
   }
 }
 function assertEmpty(data, text) {
-  if (!data.includes("", null, undefined)) {
-    throw new assertFailed(`${text} - failed!`);
+  if (!['', null, undefined].includes(data)) {
+    throw new AssertFailed(`${text} - failed!`);
+  }
+}
+function assertToBeEqual(data, dataToEqual, text) {
+  if (data != dataToEqual) {
+    throw new AssertFailed(`${text} - failed`);
   }
 }
