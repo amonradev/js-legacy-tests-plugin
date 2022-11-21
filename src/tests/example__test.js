@@ -1,5 +1,5 @@
 // Example tests
-it('group of simple tests', () => {
+describe('group of simple tests', () => {
     assertTrue(1 == 1, 'to be true');
     assertFalse(2 != 2);
     assertNotEmpty('123');

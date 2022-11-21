@@ -3,7 +3,7 @@
  * @param {string} desc
  * @param {function} fn
  */
-function it(desc, fn) {
+function describe(desc, fn) {
     try {
         fn();
         console.log('\x1b[32m%s\x1b[0m', '\u2714 ' + desc);
