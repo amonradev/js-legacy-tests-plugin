@@ -1,8 +1,9 @@
 // Example tests
-it('group of simple tests', () => {
-    assertTrue(1 == 1, 'to be true', );
-    assertFalse(2 != 2, 'to be false');
-    assertNotEmpty('123', 'to be not empty');
-    assertEmpty('', 'to be empty');
-    assertToBeEqual('123', '123', 'to be equals')
+describe('group of simple tests', () => {
+    assertTrue(1 == 1, 'to be true');
+    assertFalse(2 != 2);
+    assertNotEmpty('123');
+    assertEmpty('');
+    assertToBeEqual('123', '123')
+    assertToBeNotEqual('123', '321')
 });
